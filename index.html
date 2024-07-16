@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansh Saxena</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="icon" type="image/png" href="./images/footimg.jpg" /> -->
+  </head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.card {
+ width: 225px;
+ height: 280px;
+ background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+ border-radius: 20px;
+ transition: all .3s;
+}
+
+.card2 {
+ width: 250px;
+ height: 300px;
+ background-color: #1f2937;
+ border-radius: 10px;
+ transition: all .2s;
+}
+
+.card2:hover {
+ transform: scale(0.98);
+ border-radius: 20px;
+}
+
+.card:hover {
+ box-shadow: 0px 0px 30px 1px #14532d;
+}
+
+
+footer {
+  position: relative;
+  margin-top: -1px;
+  background-color: #343d68;
+  padding: 5rem;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.footer-faded-text {
+  position: absolute;
+  font-size: 5em;
+  left: 0;
+  bottom: 0;
+  color: #535c87;
+  user-select: none;
+}
+
+.link-wrapper {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.link-wrapper div a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.6s;
+}
+
+.hero-height{
+  height: 500px;
+  width: 350px;
+  /* margin-left: 5rem; */
+}
+
+
+.icon-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+.lazy-load {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .lazy-loaded {
+      opacity: 1;
+    }
+
+
+  /* Custom scrollbar styles */
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background: none;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient( rgb(70, 244, 70), rgb(48, 130, 253));
+    border-radius: 10px;
+  }
+  /* .scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: #888 #f5f5f5;
+    }
+    .scrollbar::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .scrollbar::-webkit-scrollbar-track {
+      background: #f5f5f5;
+    }
+    .scrollbar::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    } */
+
+</style>
+<body>
+
+<div class="w-full scroll-smooth">
+
+  <!-- navbar -->
+  <nav class="bg-gray-800 p-4 ">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#home" class="text-white text-lg tracking-wide font-semibold hover:text-green-500 transition-all duration-500">Ansh Saxena</a>
+      <div class="hidden md:flex space-x-4">
+        <a href="#home" class="text-gray-300 hover:text-green-500 transition-all duration-500 font-bold">Home</a>
+        <a href="#projects" class="text-gray-300 hover:text-green-500 transition-all duration-500 font-bold">Projects</a>
+        <!-- <a href="#about" class="text-gray-300 hover:text-green-500 transition-all duration-300 font-bold">About</a> -->
+        <a href="#skills" class="text-gray-300 hover:text-green-500 transition-all duration-500 font-bold">Skills</a>
+        <a href="#contact" class="text-gray-300 hover:text-green-500 transition-all duration-500 font-bold">Contact</a>
+      </div>
+      <button id="menu-btn" class="block md:hidden text-gray-300 focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="menu" class="md:hidden hidden">
+      <a href="#home" class="block px-2 py-1 text-gray-300 hover:text-green-500">Home</a>
+      <a href="#projects" class="block px-2 py-1 text-gray-300 hover:text-green-500">Projects</a>
+      <!-- <a href="#" class="block px-2 py-1 text-gray-300 hover:text-white">About</a> -->
+      <a href="#skills" class="block px-2 py-1 text-gray-300 hover:text-green-500">Skills</a>
+      <a href="#contact" class="block px-2 py-1 text-gray-300 hover:text-green-500">Contact</a>
+    </div>
+  </nav>
+
+  <!-- main section -->
+
+  <section class="bg-blue-100 py-12 lazy-load opacity-0">
+    <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-600 tracking-wide mb-4"><span class="text-gray-800 tracking-wide text-4xl md:text-5xl font-bold mb-4">Hii!!</span> Ansh Saxena</h1>
+         <p class="text-2xl text-gray-800 md:text-5xl font-bold mb-4">I am a <span class="role text-4xl md:text-5xl font-bold text-blue-600 mb-4"></span>
+         </p>
+        <p class="text-lg text-gray-700 mb-6 ">"Discover our services and offerings. We provide the best solutions to help you grow your business."</p>
+        <a href="#contact" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-300 hover:shadow-green-950">Let's Connect</a>
+      </div>
+      <div class="w-full flex place-content-center md:w-1/2 mb-6 md:ml-0 md:mb-0">
+        <img src="./images/mainimg.jpg" alt="Hero Image" loading="lazy" class="rounded-3xl shadow-2xl  shadow-green-950 hero-height">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Skills Section -->
+  <section class="bg-blue-50 py-12 lazy-load opacity-0" id="skills">
+    <div class="container max-w-5xl mx-auto px-4">
+      <h2 class="text-5xl font-semibold text-gray-800 text-left tracking-wide mb-8">Best Skills On</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Skill Card 1 -->
+
+        <div class="card ">
+          <div class="card2 flex flex-col">
+            <ion-icon class="w-20 text-center ml-4 h-20 text-blue-400 mt-6 mb-4" name="logo-react"></ion-icon>
+            <!-- <img src="./images/HTML.png" alt="HTML Logo" class="w-24 text-center ml-4 h-24 mt-4 mb-4"> -->
+            <h3 class="text-xl font-semibold ml-8 tracking-wide text-white mb-2">React Developer</h3>
+          <p class="text-white ml-4 tracking-wide text-left max-w-56">"Crafting dynamic & interactive applications, elevating UI/UX for web & mobile platforms."</p>
+          </div>
+        </div>
+
+  
+      <!-- Skill Card 2 -->
+
+      <div class="card ">
+        <div class="card2 flex flex-col">
+          <!-- <ion-icon name="logo-python" class="w-24 text-blue-900 text-center ml-4 h-24 mt-4 mb-4"></ion-icon> -->
+          <img src="./images/python.png"  alt="python Logo" class="w-20 ml-4 h-20 mt-6 mb-4">
+          <h3 class="text-xl font-semibold ml-8 tracking-wide text-white mb-2">Django Framework</h3>
+        <p class="text-white ml-4 text-left tracking-wide max-w-56">"Rapid development capabilities & clean, pragmatic design. ORM system for seamless database interactions."</p>
+        </div>
+      </div>
+
+
+
+
+
+       <!-- Skill Card 3 -->
+
+       <div class="card ">
+        <div class="card2 flex flex-col">
+          <img src="./images/MongoDB.svg" alt="HTML Logo" class="w-20 text-center ml-4 h-20 mt-6 mb-4">
+          <h3 class="text-xl font-semibold ml-8 tracking-wide text-white mb-2">MongoDB</h3>
+        <p class="text-white ml-4 text-left tracking-wide max-w-56">"Powerful query capabilities, including support for ad hoc queries, aggregation, and text search."</p>
+        </div>
+      </div>
+
+         <!-- Skill Card 4 -->
+
+         <div class="card ">
+          <div class="card2 flex flex-col">
+            <img src="./images/canva.png" alt="HTML Logo" class="w-20 text-center ml-4 h-20 mt-6 mb-4">
+            <h3 class="text-xl font-semibold ml-8 tracking-wide text-white mb-2">Graphic Designer</h3>
+          <p class="text-white ml-4 text-left tracking-wide max-w-56">"Ensures accuracy and consistency in design elements. Ability to generate innovative and visually appealing designs."</p>
+          </div>
+        </div>
+
+         <!-- Skill Card 5 -->
+         <div class="card ">
+          <div class="card2 flex flex-col">
+            <img src="./images/m1pg3vns.png" alt="HTML Logo" class="w-20 text-center ml-4 h-20 mt-6 mb-4">
+            <h3 class="text-xl font-semibold ml-8 tracking-wide text-white mb-2">Video Editor</h3>
+          <p class="text-white ml-4 text-left tracking-wide max-w-56">"Craft compelling narratives and appealing sequences. Ensures seamless transitions, audio synchronization, and color correction."</p>
+          </div>
+        </div>
+
+
+         <!-- Skill Card 6 -->
+         <div class="card ">
+          <div class="card2 flex flex-col">
+            <img src="./images/tailwind.png" alt="HTML Logo" class="w-24 text-center ml-4 h-20 mt-6 mb-4">
+            <h3 class="text-xl font-semibold ml-8 tracking-wide text-white mb-2">Tailwind</h3>
+          <p class="text-white ml-4 text-left tracking-wide max-w-56">"Responsive variants for customization across different screen sizes. Build custom designs without writing custom CSS."</p>
+          </div>
+        </div>
+        <!-- Add more skill cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+
+           
+    <!-- Projects Section -->
+    <section class="bg-blue-100 py-12 lazy-load opacity-0" id="projects">
+        <div class="container mx-auto px-4">
+          <h2 class="text-5xl font-semibold text-gray-800 text-left tracking-wide mb-8">My Portfolio</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-green-900 transition-all duration-500">
+              <img src="./images/discord.png" alt="Project Image" class="w-full h-48 object-cover hover:scale-110 transition-all duration-500">
+              <div class="p-4">
+                <!-- <h3 class="text-xl font-semibold text-gray-800">Project Title 1</h3> -->
+                 <div class="flex justify-between">
+                    <h3 class="text-xl font-semibold tracking-wide text-blue-300">Development</h3>
+                    <p class="text-red-700 ">♥</p>
+                    <!-- <ion-icon name="logo-github"></ion-icon>  -->
+                 </div>
+                <p class="text-gray-600 text-lg font-bold mt-2 tracking-wide">Develop a Clone Website of Discord using Tailwind, enhance advance frontend skills. </p>
+                <a href="https://github.com/Anshhere07/Discord_clone" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-500 hover:shadow-green-950">Get Source Code</a>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden  hover:shadow-green-900 transition-all duration-300">
+              <img src="./images/design.png" alt="Project Image" class="w-full h-48 object-cover hover:scale-110 transition-all duration-500">
+              <div class="p-4">
+                <!-- <h3 class="text-xl font-semibold text-gray-800">Project Title 2</h3> -->
+                <div class="flex justify-between">
+                  <h3 class="text-xl font-semibold text-blue-300 tracking-wide">Designing & Editing</h3>
+                  <p class="text-red-700 ">♥</p>
+                  <!-- <ion-icon name="logo-github"></ion-icon>  -->
+               </div>
+                <p class="text-gray-600 font-bold mt-2 text-lg tracking-wide">Design various template, thumbnail and edit videos for RBC(Ruby) coin, with good user-experience.</p>
+                <a href="https://www.linkedin.com/in/ansh-saxena387/" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-500 hover:shadow-green-950">On Source Page</a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden  hover:shadow-green-900 transition-all duration-500">
+              <img src="./images/password.png" alt="Project Image" class="w-full h-48 object-cover hover:scale-110 transition-all duration-500">
+              <div class="p-4">
+                <!-- <h3 class="text-xl font-semibold text-gray-800">Project Title 3</h3> -->
+                <div class="flex justify-between">
+                  <h3 class="text-xl font-semibold text-blue-300 tracking-wide">Application</h3>
+                  <p class="text-red-700 ">♥</p>
+                  <!-- <ion-icon name="logo-github"></ion-icon>  -->
+               </div>
+                <p class="text-gray-600 font-bold mt-2 text-lg tracking-wide">Password Generator Application for mobile phones using JavaScript, fully responsive.</p>
+                <a href="https://github.com/Anshhere07/Password_Generator" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-500 hover:shadow-green-950">Get Source Code</a>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden  hover:shadow-green-900 transition-all duration-500">
+                <img src="./images/weather.png" alt="Project Image" class="w-full h-48 object-cover hover:scale-110 transition-all duration-500">
+                <div class="p-4">
+                  <!-- <h3 class="text-xl font-semibold text-gray-800">Project Title 3</h3> -->
+                  <div class="flex justify-between">
+                    <h3 class="text-xl font-semibold text-blue-300 tracking-wide">Application</h3>
+                    <p class="text-red-700 ">♥</p>
+                    <!-- <ion-icon name="logo-github"></ion-icon>  -->
+                 </div>
+                  <p class="text-gray-600 mt-2 font-bold text-lg tracking-wide">Weather Application for mobile phones, Dynamic and responive using only HTML, CSS, JS. </p>
+                  <a href="https://github.com/Anshhere07/Weather_App" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-500 hover:shadow-green-950">Get Source Code</a>
+                </div>
+            </div>
+
+                <!-- card 5 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden  hover:shadow-green-900 transition-all duration-500">
+                    <img src="./images/plan.png" alt="Project Image" class="w-full h-48 object-cover hover:scale-110 transition-all duration-500">
+                    <div class="p-4">
+                      <!-- <h3 class="text-xl font-semibold text-gray-800">Project Title 3</h3> -->
+                      <div class="flex justify-between">
+                        <h3 class="text-xl font-semibold text-blue-300 tracking-wide">Development</h3>
+                        <p class="text-red-700 ">♥</p>
+                        <!-- <ion-icon name="logo-github"></ion-icon>  -->
+                     </div>
+                      <p class="text-gray-600 mt-2 text-lg font-bold tracking-wide">Plan_With_Me is a trip booking website, Develop using Reactjs Framework & TailwindCSS.</p>
+                      <a href="https://github.com/Anshhere07/Plan_With_Me" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-500 hover:shadow-green-950">Get Source Code</a>
+                    </div>
+                </div>
+
+                    <!-- card 6 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden  hover:shadow-green-900 transition-all duration-500">
+                <img src="./images/village.png" alt="Project Image" class="w-full h-48 object-cover hover:scale-110 transition-all duration-500">
+                <div class="p-4">
+                  <!-- <h3 class="text-xl font-semibold text-gray-800">Project Title 3</h3> -->
+                  <div class="flex justify-between">
+                    <h3 class="text-xl font-semibold text-blue-300 tracking-wide">Development</h3>
+                    <p class="text-red-700 ">♥</p>
+                    <!-- <ion-icon name="logo-github"></ion-icon>  -->
+                 </div>
+                  <p class="text-gray-600 font-bold mt-2 text-lg tracking-wide">E-village is a website portal for various schemes, Develop using a Python with Django Framework.</p>
+                  <a href="https://github.com/Anshhere07/Plan_With_Me" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-green-700 transition duration-500 hover:shadow-green-950">Get Source Code </a>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+          </div>
+        </div>
+      </section>
+
+      
+  <!-- <section class="bg-gray-100 py-12">
+    <div class="container mx-auto max-w-4xl px-4">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">My Skills</h2>
+      <div class="flex flex-col">
+         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex molestias cupiditate iste laudantium, rem nostrum, tempora nobis in dolores quod consectetur pariatur officia quaerat dolorum. Delectus hic libero sit quos.
+      </div>
+      <div class="flex flex-wrap justify-center items-center space-x-4">
+        <img src="./images/HTML.png" alt="HTML Logo" class="w-16 h-16">
+        <img src="./images/CSS.png" alt="CSS Logo" class="w-16 h-16">
+        <img src="./images/Javascript.svg" alt="JavaScript Logo" class="w-16 h-16">
+        <img src="./images/MaterialUI.svg" alt="Material UI Logo" class="w-16 h-16">
+        <img src="./images/MongoDB.svg" alt="Mongo DB" class="w-16 h-16">
+        <img src="./images/Git.svg" alt="git Logo" class="w-16 h-16">
+        <img src="./images/Github.svg" alt="github Logo" class="w-16 h-16">
+        Add more logos as needed
+      </div>
+    </div>
+  </section>
+ -->
+
+
+ 
+
+ <!-- Contact Form Section -->
+ 
+   <div class="flex w-full min-h-screen justify-center items-center lazy-load opacity-0" id="contact">
+
+    <div class="flex flex-col md:flex-row md:space-x-6  space-y-6 md:space-y-0 bg-gray-800 w-full max-w-5xl p-8 sm:p-12 rounded-xl shadow-lg text-white overflow-hidden">
+
+
+      <div class="flex flex-col space-y-8 justify-between">
+ 
+        <div>
+          <h1 class="font-semibold text-5xl tracking-wide">Contact</h1>
+          <h2 class="font-semibold text-3xl tracking-wide pt-8">Ansh Saxena</h2>
+          <p class="pt-8 tracking-wide text-gray-200 text-xl">Developer and Designer</p>
+          <p class="pt-8 tracking-wide text-gray-200 text-xl">I am available for freelance work. Connect with me via and call in to my account.</p>
+          
+        </div>
+
+
+        <div class="flex flex-col space-y-6">
+          <div class="inline-flex space-x-2 items-center">
+            <a href="https://wa.me/6394395060"><ion-icon name="logo-whatsapp" class="text-xl hover:text-green-500 transition-all duration-300 "></ion-icon> 
+              <span class="text-lg hover:underline hover:text-green-500 transition-all duration-300">+91 639-4395-060</span>
+            </a>
+            <!-- <span class="text-lg">6394395060</span> -->
+          </div>
+
+          <div class="inline-flex space-x-2 items-center">
+            <!-- <a href="https://mail.google.com/mail"><ion-icon name="mail" class="text-xl hover:text-green-500 transition-all duration-300"></ion-icon> -->
+            </a>
+            <a href="mailto:saxenansh@gmail.com"><ion-icon name="mail" class="text-xl hover:text-green-500 transition-all duration-300"></ion-icon>
+              <span class="text-lg hover:underline hover:text-green-500 transition-all duration-300">saxenaansh387@gmail.com</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="flex space-x-4 text-lg">
+
+          <a href="https://github.com/Anshhere07" class="hover:text-green-500 transition-all duration-300 ">
+            <ion-icon name="logo-github"></ion-icon>          
+          </a>
+          <a href="https://www.linkedin.com/in/ansh-saxena387/" class="hover:text-green-500 transition-all duration-300">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+
+          <a href="https://x.com/AnshSaxena98830"  class="hover:text-green-500 transition-all duration-300">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+
+          <a href="https://www.instagram.com/itz.me_ansh/"  class="hover:text-green-500 transition-all duration-300">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute w-40 h-40 bg-blue-400 rounded-full z-0 -right-28 -top-28"></div>
+
+        <div class="absolute w-40 h-40 bg-blue-400 rounded-full z-0 -left-28 -bottom-16"></div>
+
+
+        <div class="relative z-10 bg-white text-gray-800 rounded-xl shadow-lg p-8 md:w-80">
+            <form data-email="saxenaansh387@gmail.com" action="https://script.google.com/macros/s/AKfycbxI6uIG-hCOg3yDwL4b0_ZyRz3FyDGrZBkYTPdEk2lgtLKtu9J6Gc51PeG7nGeLRNSg-g/exec" method="post"
+               id="contact-form" class="flex flex-col space-y-2">
+              
+              <div>
+                  <label for="name" class="text-sm">Your Name</label>
+              
+                <input required type="text" placeholder="Your name" class="ring-1 mt-2 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300" name="name" id="name">
+              </div>
+
+              <div>
+                <label for="phone" class="text-sm">Phone No</label>
+           
+              <input required type="text" placeholder="+91 8128-8128-02" class="ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300" name="phone" id="phone">
+            </div>
+
+            <div>
+              <label for="email" class="text-sm">Email</label>
+        
+            <input required type="email" placeholder="your@gmail.com" class="ring-1 mt-2 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300" name="email" id="email">
+          </div>
+            
+
+          <div>
+            <label for="message" class="text-sm">Message</label>
+      
+          <textarea type="Message" required name="message" id="message" rows="4" placeholder="message" class="ring-1 mt-2 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-teal-300" >
+          </textarea>
+        </div>
+          
+
+        <button type="submit" id="submit" value="submit" class="inline-block self-end bg-blue-500 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm hover:bg-green-700 transition-all duration-300">
+          Send Message
+        </button>
+
+            </form>
+        </div>
+      </div>
+    </div>
+   </div>
+
+
+   <!-- Footer Section -->
+
+   <footer class="bg-gray-800 text-white py-6 lazy-load opacity-0">
+    <div class="container mx-auto px-4">
+      <div class="footer-wrapper flex flex-col md:flex-row justify-between items-center">
+     
+        <div class="link-wrapper flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+          <div>
+            <a href="#projects" class="hover:text-green-600 transition duration-300">Projects</a>
+          </div>
+          <div>
+            <a href="#skills" class="hover:text-green-600 transition duration-300">Skills</a>
+          </div>
+          <div>
+            <a href="#contact" class="hover:text-green-600 transition duration-300">Contact Me</a>
+          </div>
+        </div>
+  
+        <div class="icon-wrapper flex space-x-4">
+          <a href="https://www.linkedin.com/in/ansh-saxena387/" class="hover:text-green-600 transition duration-300">
+            <i class="fa-brands fa-linkedin icon"></i>
+          </a>
+          <a href="https://github.com/Anshhere07" class="hover:text-green-600 transition duration-300">
+            <i class="fa-brands fa-github icon"></i>
+          </a>
+          <a href="https://x.com/AnshSaxena98830" class="hover:text-green-600 transition duration-300">
+            <i class="fa-brands fa-twitter icon"></i>
+          </a>
+          <a href="https://www.instagram.com/itz.me_ansh/" class="hover:text-green-600 transition duration-300">
+            <i class="fa-brands fa-instagram icon"></i>
+          </a>
+          <!-- <a href="#" class="hover:text-gray-400 transition duration-300">
+            <i class="fa-brands fa-envelope icon"></i>
+          </a> -->
+        </div>
+
+        <!-- <p class="text-gray-400">© All Rights are Reserved by <span class="text-gray-50  font-semibold">Ansh Saxena</span></p> -->
+      </div>
+      <!-- <img class="flex justify-center items-center"  src="./images/canva.png" alt="img" height="100px" width="100px"> -->
+      <!-- <p class="flex justify-center gap-2 items-center text-gray-400">© All Rights are Reserved by <span class="text-gray-50  font-semibold"> Ansh Saxena</span></p> -->
+
+      <div class="flex flex-col justify-center items-center">
+         <img class="rounded-full shadow-2xl shadow-green-950" src="./images/footimg.jpg" alt="img" width="100px">
+      <p class="flex flex-wrap justify-center gap-2 mt-4 items-center text-gray-400">© All Rights are Reserved by <span class="text-gray-50  font-semibold"> Ansh Saxena</span></p>
+      </div>
+     
+    </div>
+  </footer>
+  
+  <!-- <footer class="bg-gray-800 py-6">
+    
+  </footer> -->
+       
+
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12 "></script>
+<script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+<script>
+    var typeData = new Typed(".role", {
+      strings: [
+        "Frontend Developer",
+        "React Developer",
+        "Graphic Designer",
+        "Video Editor",
+      ],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+    });
+  </script>
+
+   <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
